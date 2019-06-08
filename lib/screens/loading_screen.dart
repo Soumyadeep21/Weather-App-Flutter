@@ -28,11 +28,7 @@ class _LoadingScreenState extends State<LoadingScreen> {
     NetworkHelper networkHelper = NetworkHelper(
       'https://api.openweathermap.org/data/2.5/weather?lat=$latitude&lon=$longitude&appid=$apiKey'
     );
-    var weatherData = await networkHelper.getData();
-    var temp = weatherData['main']['temp'];
-    var condition = weatherData['weather'][0]['id'];
-    var city = weatherData['name'];
-    print(' $city  $temp  $condition');    
+    var weatherData = await networkHelper.getData();    
   }
 
   @override
